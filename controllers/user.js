@@ -41,13 +41,11 @@ exports.user_register = (req, res, next) => {
             });
 ////////////////////////////////////////////////////////////////
             request.form({
-              sender_id: "u4ktrj", // Set your own "sender_id"
-              message: "34229", // template id
-              language: "english",
-              route: "qt", // Transactional Route SMS
-              variables: "{#AA#}",
-              variables_values: OTP,
-              numbers: req.body.phone // Number present in GET request
+             "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
             });
 
             request.end(function(res1) {
@@ -111,13 +109,11 @@ exports.user_phone = (req, res, next) => {
     });
 
     request.form({
-      sender_id: "u4ktrj", // Set your own "sender_id"
-      message: "34229", // template id
-      language: "english",
-      route: "qt", // Transactional Route SMS
-      variables: "{#AA#}",
-      variables_values: OTP,
-      numbers: req.body.phone // Number present in GET request
+     "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
     });
 
     request.end(function(res1) {
@@ -149,13 +145,11 @@ exports.user_phone_change = (req, res, next) => {
           });
       
           request.form({
-            sender_id: "u4ktrj", // Set your own "sender_id"
-            message: "34229", // template id
-            language: "english",
-            route: "qt", // Transactional Route SMS
-            variables: "{#AA#}",
-            variables_values: OTP,
-            numbers: req.body.phone // Number present in GET request
+            "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
           });
       
           request.end(function(res1) {
@@ -188,13 +182,11 @@ exports.user_phone_change = (req, res, next) => {
       });
   
       request.form({
-        sender_id: "u4ktrj", // Set your own "sender_id"
-        message: "34229", // template id
-        language: "english",
-        route: "qt", // Transactional Route SMS
-        variables: "{#AA#}",
-        variables_values: OTP,
-        numbers: req.body.phone // Number present in GET request
+        "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
       });
   
       request.end(function(res1) {
@@ -267,13 +259,11 @@ exports.user_login = (req, res, next) => {
         });
 
         request.form({
-          sender_id: "u4ktrj", // Set your own "sender_id"
-          message: "34229", // template id
-          language: "english",
-          route: "qt", // Transactional Route SMS
-          variables: "{#AA#}",
-          variables_values: OTP,
-          numbers: req.body.phone // Number present in GET request
+         "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
         });
 
         request.end(function(res1) {
