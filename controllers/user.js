@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 var unirest = require("unirest");
-var request = unirest("POST", "https://www.fast2sms.com/dev/bulk");
+var request = unirest("POST", "https://www.fast2sms.com/dev/bulkV2");
 
 
 
@@ -37,7 +37,7 @@ exports.user_register = (req, res, next) => {
             userFields.refer2=tmp;
             const OTP = Math.floor(1000 + Math.random() * 9000);
             request.headers({
-              authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+              authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
             });
 ////////////////////////////////////////////////////////////////
             request.form({
@@ -105,7 +105,7 @@ exports.user_phone = (req, res, next) => {
     }
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
-      authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
     });
 
     request.form({
@@ -141,7 +141,7 @@ exports.user_phone_change = (req, res, next) => {
         if (!user1) {
           const OTP = Math.floor(1000 + Math.random() * 9000);
           request.headers({
-            authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+            authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
           });
       
           request.form({
@@ -178,7 +178,7 @@ exports.user_phone_change = (req, res, next) => {
     }else{
       const OTP = Math.floor(1000 + Math.random() * 9000);
       request.headers({
-        authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+        authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
       });
   
       request.form({
@@ -255,7 +255,7 @@ exports.user_login = (req, res, next) => {
       if(user.phone_verified==false){
         const OTP = Math.floor(1000 + Math.random() * 9000);
         request.headers({
-          authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+          authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
         });
 
         request.form({
