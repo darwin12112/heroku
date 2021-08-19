@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{345:function(n,e,a){"use strict";a.r(e);var o=a(1),t=a.n(o),c=a(109);e.default=function(){return localStorage.clear(),t.a.createElement(c.a,{to:"/login"})}}}]);
+//# sourceMappingURL=25.e033a6ff.chunk.js.map
