@@ -2,7 +2,7 @@ const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 var unirest = require("unirest");
-var request = unirest("POST", "https://www.fast2sms.com/dev/bulk");
+var request = unirest("POST", "https://www.fast2sms.com/dev/bulkV2");
 
 
 
@@ -37,17 +37,16 @@ exports.user_register = (req, res, next) => {
             userFields.refer2=tmp;
             const OTP = Math.floor(1000 + Math.random() * 9000);
             request.headers({
-              authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+              authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
             });
 ////////////////////////////////////////////////////////////////
             request.form({
-              sender_id: "u4ktrj", // Set your own "sender_id"
-              message: "34229", // template id
-              language: "english",
-              route: "qt", // Transactional Route SMS
-              variables: "{#AA#}",
-              variables_values: OTP,
-              numbers: req.body.phone // Number present in GET request
+             "route" : "v3",
+"sender_id" : "TXTIND",
+message : OTP
+"language" : "english",
+"flash" : 0,
+"numbers" : "phone",
             });
 
             request.end(function(res1) {
@@ -107,17 +106,16 @@ exports.user_phone = (req, res, next) => {
     }
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
-      authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
     });
 
     request.form({
-      sender_id: "u4ktrj", // Set your own "sender_id"
-      message: "34229", // template id
-      language: "english",
-      route: "qt", // Transactional Route SMS
-      variables: "{#AA#}",
-      variables_values: OTP,
-      numbers: req.body.phone // Number present in GET request
+      "route" : "v3",
+"sender_id" : "TXTIND",
+message : OTP
+"language" : "english",
+"flash" : 0,
+"numbers" : "phone",
     });
 
     request.end(function(res1) {
@@ -145,17 +143,16 @@ exports.user_phone_change = (req, res, next) => {
         if (!user1) {
           const OTP = Math.floor(1000 + Math.random() * 9000);
           request.headers({
-            authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+            authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
           });
       
           request.form({
-            sender_id: "u4ktrj", // Set your own "sender_id"
-            message: "34229", // template id
-            language: "english",
-            route: "qt", // Transactional Route SMS
-            variables: "{#AA#}",
-            variables_values: OTP,
-            numbers: req.body.phone // Number present in GET request
+            "route" : "v3",
+"sender_id" : "TXTIND",
+message : OTP
+"language" : "english",
+"flash" : 0,
+"numbers" : "phone",
           });
       
           request.end(function(res1) {
@@ -184,17 +181,16 @@ exports.user_phone_change = (req, res, next) => {
     }else{
       const OTP = Math.floor(1000 + Math.random() * 9000);
       request.headers({
-        authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+        authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
       });
   
       request.form({
-        sender_id: "u4ktrj", // Set your own "sender_id"
-        message: "34229", // template id
-        language: "english",
-        route: "qt", // Transactional Route SMS
-        variables: "{#AA#}",
-        variables_values: OTP,
-        numbers: req.body.phone // Number present in GET request
+        "route" : "v3",
+"sender_id" : "TXTIND",
+message : OTP
+"language" : "english",
+"flash" : 0,
+"numbers" : "phone",
       });
   
       request.end(function(res1) {
@@ -263,17 +259,16 @@ exports.user_login = (req, res, next) => {
       if(user.phone_verified==false){
         const OTP = Math.floor(1000 + Math.random() * 9000);
         request.headers({
-          authorization: "6zN08VAJNl781nfO0Qgb58Ou59mHosvfJWsHx5GwdhorabBPwcFY5dNGcXC1"
+          authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
         });
 
         request.form({
-          sender_id: "u4ktrj", // Set your own "sender_id"
-          message: "34229", // template id
-          language: "english",
-          route: "qt", // Transactional Route SMS
-          variables: "{#AA#}",
-          variables_values: OTP,
-          numbers: req.body.phone // Number present in GET request
+         "route" : "v3",
+"sender_id" : "TXTIND",
+message : OTP
+"language" : "english",
+"flash" : 0,
+"numbers" : "phone",
         });
 
         request.end(function(res1) {
