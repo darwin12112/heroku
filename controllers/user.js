@@ -43,7 +43,7 @@ exports.user_register = (req, res, next) => {
             request.form({
              "route" : "v3",
 "sender_id" : "TXTIND",
-message : "OTP",
+message : OTP
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
@@ -112,7 +112,7 @@ exports.user_phone = (req, res, next) => {
     request.form({
       "route" : "v3",
 "sender_id" : "TXTIND",
-message : "OTP",
+message : OTP
 "language" : "english",
 "flash" : 0,
 "number" : "phone",
@@ -149,7 +149,7 @@ exports.user_phone_change = (req, res, next) => {
           request.form({
             "route" : "v3",
 "sender_id" : "TXTIND",
-message : "OTP",
+message : OTP
 "language" : "english",
 "flash" : 0,
 "number" : "phone",
@@ -187,7 +187,7 @@ message : "OTP",
       request.form({
         "route" : "v3",
 "sender_id" : "TXTIND",
-message : "OTP",
+message : OTP
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
@@ -265,7 +265,7 @@ exports.user_login = (req, res, next) => {
         request.form({
          "route" : "v3",
 "sender_id" : "TXTIND",
-message : "OTP",
+message : OTP
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
