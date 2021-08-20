@@ -38,12 +38,13 @@ exports.user_register = (req, res, next) => {
             const OTP = Math.floor(1000 + Math.random() * 9000);
             request.headers({
               authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-            });
+            "Content-Type":"application/json"
+});
 ////////////////////////////////////////////////////////////////
             request.form({
              "route" : "v3",
 "sender_id" : "TXTIND",
-message : OTP
+message : OTP,
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
@@ -107,12 +108,13 @@ exports.user_phone = (req, res, next) => {
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
       "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-    });
+   "Content-Type":"application/json"
+ });
 
     request.form({
       "route" : "v3",
 "sender_id" : "TXTIND",
-message : OTP
+message : OTP,
 "language" : "english",
 "flash" : 0,
 "number" : "phone",
@@ -144,12 +146,13 @@ exports.user_phone_change = (req, res, next) => {
           const OTP = Math.floor(1000 + Math.random() * 9000);
           request.headers({
             "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-          });
+        "Content-Type":"application/json"
+  });
       
           request.form({
             "route" : "v3",
 "sender_id" : "TXTIND",
-message : OTP
+message : OTP,
 "language" : "english",
 "flash" : 0,
 "number" : "phone",
@@ -182,12 +185,13 @@ message : OTP
       const OTP = Math.floor(1000 + Math.random() * 9000);
       request.headers({
         "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-      });
+     "Content-Type":"application/json"
+ });
   
       request.form({
         "route" : "v3",
 "sender_id" : "TXTIND",
-message : OTP
+message : OTP,
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
@@ -260,12 +264,13 @@ exports.user_login = (req, res, next) => {
         const OTP = Math.floor(1000 + Math.random() * 9000);
         request.headers({
           "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-        });
+       "Content-Type":"application/json"
+ });
 
         request.form({
          "route" : "v3",
 "sender_id" : "TXTIND",
-message : OTP
+message : OTP,
 "language" : "english",
 "flash" : 0,
 "numbers" : "phone",
