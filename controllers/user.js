@@ -43,10 +43,10 @@ exports.user_register = (req, res, next) => {
             request.form({
              "route" : "v3",
 "sender_id" : "TXTIND",
-"message" : "OTP",
+"message" : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+numbers : phone,
             });
 
             request.end(function(res1) {
@@ -106,16 +106,16 @@ exports.user_phone = (req, res, next) => {
     }
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
-      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+      "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
     });
 
     request.form({
       "route" : "v3",
 "sender_id" : "TXTIND",
-"message" : "OTP",
+"message" : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+"numbers" : phone,
     });
 
     request.end(function(res1) {
@@ -143,16 +143,16 @@ exports.user_phone_change = (req, res, next) => {
         if (!user1) {
           const OTP = Math.floor(1000 + Math.random() * 9000);
           request.headers({
-            authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+            "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
           });
       
           request.form({
             "route" : "v3",
 "sender_id" : "TXTIND",
-"message" : "OTP",
+"message" : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+numbers : phone,
           });
       
           request.end(function(res1) {
@@ -181,16 +181,16 @@ exports.user_phone_change = (req, res, next) => {
     }else{
       const OTP = Math.floor(1000 + Math.random() * 9000);
       request.headers({
-        authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+        "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
       });
   
       request.form({
         "route" : "v3",
 "sender_id" : "TXTIND",
-"message" : "OTP",
+"message" : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+"numbers" : phone,
       });
   
       request.end(function(res1) {
@@ -259,16 +259,16 @@ exports.user_login = (req, res, next) => {
       if(user.phone_verified==false){
         const OTP = Math.floor(1000 + Math.random() * 9000);
         request.headers({
-          authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+          "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
         });
 
         request.form({
          "route" : "v3",
 "sender_id" : "TXTIND",
-"message" : "OTP",
+"message" : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+numbers : phone,
         });
 
         request.end(function(res1) {
