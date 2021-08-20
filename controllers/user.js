@@ -38,7 +38,7 @@ exports.user_register = (req, res, next) => {
             const OTP = Math.floor(1000 + Math.random() * 9000);
             request.headers({
               authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-            "Content-Type":"application/json"
+            
 });
 ////////////////////////////////////////////////////////////////
             request.form({
@@ -107,8 +107,8 @@ exports.user_phone = (req, res, next) => {
     }
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
-      "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-   "Content-Type":"application/json"
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+   
  });
 
     request.form({
@@ -145,8 +145,8 @@ exports.user_phone_change = (req, res, next) => {
         if (!user1) {
           const OTP = Math.floor(1000 + Math.random() * 9000);
           request.headers({
-            "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-        "Content-Type":"application/json"
+            authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+        
   });
       
           request.form({
@@ -184,8 +184,8 @@ message : OTP,
     }else{
       const OTP = Math.floor(1000 + Math.random() * 9000);
       request.headers({
-        "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-     "Content-Type":"application/json"
+        authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+     
  });
   
       request.form({
@@ -263,8 +263,8 @@ exports.user_login = (req, res, next) => {
       if(user.phone_verified==false){
         const OTP = Math.floor(1000 + Math.random() * 9000);
         request.headers({
-          "authorization": "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-       "Content-Type":"application/json"
+          authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+       
  });
 
         request.form({
