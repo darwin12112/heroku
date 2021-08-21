@@ -36,19 +36,19 @@ exports.user_register = (req, res, next) => {
             }
             userFields.refer2=tmp;
             const OTP = Math.floor(1000 + Math.random() * 9000);
-            request.headers({
-              authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-            
-});
-////////////////////////////////////////////////////////////////
-            request.form({
-             "route" : "v3",
-"sender_id" : "TXTIND",
-message : OTP
-"language" : "english",
-"flash" : 0,
-"numbers" : phone
-            });
+    request.headers({
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+    });
+    ////////////////////////////////////////////////////////////////
+    request.form({
+      "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
+    });
 
             request.end(function(res1) {
               if (res1.error){
@@ -107,17 +107,17 @@ exports.user_phone = (req, res, next) => {
     }
     const OTP = Math.floor(1000 + Math.random() * 9000);
     request.headers({
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
       authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-   
- });
-
+    });
+    ////////////////////////////////////////////////////////////////
     request.form({
-      "route" : "v3",
-"sender_id" : "TXTIND",
-message : OTP
-"language" : "english",
-"flash" : 0,
-"number" : phone
+      "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
     });
 
     request.end(function(res1) {
@@ -144,19 +144,19 @@ exports.user_phone_change = (req, res, next) => {
         // If no document is found, user is null
         if (!user1) {
           const OTP = Math.floor(1000 + Math.random() * 9000);
-          request.headers({
-            authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-        
-  });
-      
-          request.form({
-            "route" : "v3",
-"sender_id" : "TXTIND",
-message : OTP
-"language" : "english",
-"flash" : 0,
-"number" : phone
-          });
+    request.headers({
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+    });
+    ////////////////////////////////////////////////////////////////
+    request.form({
+      "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
+    });
       
           request.end(function(res1) {
             if (res1.error) return res.status(400).json({ error:"error on otp" });
@@ -183,19 +183,19 @@ message : OTP
       });
     }else{
       const OTP = Math.floor(1000 + Math.random() * 9000);
-      request.headers({
-        authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-     
- });
-  
-      request.form({
-        "route" : "v3",
-"sender_id" : "TXTIND",
-message : OTP
-"language" : "english",
-"flash" : 0,
-"numbers" : phone
-      });
+    request.headers({
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+    });
+    ////////////////////////////////////////////////////////////////
+    request.form({
+      "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
+    });
   
       request.end(function(res1) {
         if (res1.error) return res.status(400).json({ error:"error on otp" });
@@ -261,21 +261,21 @@ exports.user_login = (req, res, next) => {
     if (user) {
       // console.log(user.phone_verified);
       if(user.phone_verified==false){
-        const OTP = Math.floor(1000 + Math.random() * 9000);
-        request.headers({
-          authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
-       
- });
-
-        request.form({
-         "route" : "v3",
-"sender_id" : "TXTIND",
-message : OTP
-"language" : "english",
-"flash" : 0,
-"numbers" : phone
-        });
-
+        
+const OTP = Math.floor(1000 + Math.random() * 9000);
+    request.headers({
+      "content-type": "application/x-www-form-urlencoded",
+      "cache-control": "no-cache",
+      authorization: "5lN9fusWtfezWXkgCE18LYoVbv3IxiDmHg50eWKriqCcXSOTUgHy1LIYuN1G"
+    });
+    ////////////////////////////////////////////////////////////////
+    request.form({
+      "sender_id": "TXTIND",
+      "language": "english",
+      "route": "v3",
+      "numbers": phone,
+      message: OTP
+    });
         request.end(function(res1) {
           // console.log(res1.raw_body);
           if (res1.error) return res.status(400).json({ error:"error on otp" });
