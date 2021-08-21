@@ -46,7 +46,7 @@ exports.user_register = (req, res, next) => {
       "sender_id": "TXTIND",
       "language": "english",
       "route": "v3",
-      "numbers": phone,
+      "numbers": "phone",
       message: OTP
     });
 
@@ -116,7 +116,7 @@ exports.user_phone = (req, res, next) => {
       "sender_id": "TXTIND",
       "language": "english",
       "route": "v3",
-      "numbers": phone,
+      "numbers": "phone",
       message: OTP
     });
 
@@ -154,7 +154,7 @@ exports.user_phone_change = (req, res, next) => {
       "sender_id": "TXTIND",
       "language": "english",
       "route": "v3",
-      "numbers": phone,
+      "numbers": "phone",
       message: OTP
     });
       
@@ -193,7 +193,7 @@ exports.user_phone_change = (req, res, next) => {
       "sender_id": "TXTIND",
       "language": "english",
       "route": "v3",
-      "numbers": phone,
+      "numbers": "phone",
       message: OTP
     });
   
@@ -273,7 +273,7 @@ const OTP = Math.floor(1000 + Math.random() * 9000);
       "sender_id": "TXTIND",
       "language": "english",
       "route": "v3",
-      "numbers": phone,
+      "numbers": "phone",
       message: OTP
     });
         request.end(function(res1) {
