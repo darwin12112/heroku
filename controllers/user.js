@@ -47,7 +47,7 @@ exports.user_register = (req, res, next) => {
 message : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+"numbers" : phone
             });
 
             request.end(function(res1) {
@@ -117,7 +117,7 @@ exports.user_phone = (req, res, next) => {
 message : OTP,
 "language" : "english",
 "flash" : 0,
-"number" : "phone",
+"number" : phone
     });
 
     request.end(function(res1) {
@@ -155,7 +155,7 @@ exports.user_phone_change = (req, res, next) => {
 message : OTP,
 "language" : "english",
 "flash" : 0,
-"number" : "phone",
+"number" : phone,
           });
       
           request.end(function(res1) {
@@ -194,7 +194,7 @@ message : OTP,
 message : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+"numbers" : phone
       });
   
       request.end(function(res1) {
@@ -273,7 +273,7 @@ exports.user_login = (req, res, next) => {
 message : OTP,
 "language" : "english",
 "flash" : 0,
-"numbers" : "phone",
+"numbers" : phone
         });
 
         request.end(function(res1) {
