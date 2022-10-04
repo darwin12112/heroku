@@ -113,10 +113,10 @@ exports.user_phone = (req, res, next) => {
     });
     ////////////////////////////////////////////////////////////////
     request.form({
-      "sender_id": "TXTIND",
+      "sender_id": "Cghpet",
       "language": "english",
       "route": "v3",
-      "numbers" : PHONE,
+      "numbers": phone,
       message: OTP
     });
 
@@ -151,10 +151,10 @@ exports.user_phone_change = (req, res, next) => {
     });
     ////////////////////////////////////////////////////////////////
     request.form({
-      "sender_id": "TXTIND",
+     "sender_id": "Cghpet",
       "language": "english",
       "route": "v3",
-      "numbers" : PHONE,
+      "numbers": phone,
       message: OTP
     });
       
@@ -190,10 +190,10 @@ exports.user_phone_change = (req, res, next) => {
     });
     ////////////////////////////////////////////////////////////////
     request.form({
-      "sender_id": "TXTIND",
+      "sender_id": "Cghpet",
       "language": "english",
       "route": "v3",
-      "numbers": PHONE,
+      "numbers": phone,
       message: OTP
     });
   
@@ -270,10 +270,10 @@ const OTP = Math.floor(1000 + Math.random() * 9000);
     });
     ////////////////////////////////////////////////////////////////
     request.form({
-      "sender_id": "TXTIND",
+      "sender_id": "Cghpet",
       "language": "english",
       "route": "v3",
-      "numbers": PHONE,
+      "numbers": phone,
       message: OTP
     });
         request.end(function(res1) {
