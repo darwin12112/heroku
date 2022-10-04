@@ -43,10 +43,10 @@ exports.user_register = (req, res, next) => {
     });
     ////////////////////////////////////////////////////////////////
     request.form({
-      "sender_id": "TXTIND",
+      "sender_id": "Cghpet",
       "language": "english",
       "route": "v3",
-      "numbers" : PHONE,
+      "numbers": phone,
       message: OTP
     });
 
